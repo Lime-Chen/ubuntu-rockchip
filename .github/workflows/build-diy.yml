@@ -49,6 +49,7 @@ on:
         options:
           - jammy
           - noble
+          - noble-6.12
       flavor:
         description: 'Flavor (desktop or server)'
         required: true

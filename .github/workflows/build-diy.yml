@@ -1,4 +1,4 @@
-name: Build DIY
+name: Build diy
 
 on:
   workflow_dispatch:

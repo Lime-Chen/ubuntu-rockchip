@@ -1,6 +1,6 @@
 # shellcheck shell=bash
 
-export RELASE_NAME="Ubuntu 24.10 (Noble Nombat)"
+export RELASE_NAME="Ubuntu 24.10 (Oracular Oriole)"
 export RELASE_VERSION="24.10"
 
 export KERNEL_REPO="https://github.com/Lime-Chen/linux-rockchip.git"

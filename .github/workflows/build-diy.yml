@@ -142,7 +142,8 @@ jobs:
           debootstrap flex libssl-dev bc rsync kmod cpio xz-utils fakeroot parted \
           udev dosfstools uuid-runtime git-lfs device-tree-compiler python2 python3 \
           python-is-python3 fdisk bc debhelper python3-pyelftools python3-setuptools \
-          python3-distutils python3-pkg-resources swig libfdt-dev libpython3-dev libelf-dev dwarves
+          python3-distutils python3-pkg-resources swig libfdt-dev libpython3-dev libelf-dev \
+          dwarves linux-headers-$(uname -r) bluez libbluetooth-dev
 
       - name: Build
         shell: bash
@@ -196,7 +197,8 @@ jobs:
           debootstrap flex libssl-dev bc rsync kmod cpio xz-utils fakeroot parted \
           udev dosfstools uuid-runtime git-lfs device-tree-compiler python2 python3 \
           python-is-python3 fdisk bc debhelper python3-pyelftools python3-setuptools \
-          python3-distutils python3-pkg-resources swig libfdt-dev libpython3-dev libelf-dev dwarves dctrl-tools
+          python3-distutils python3-pkg-resources swig libfdt-dev libpython3-dev libelf-dev \
+          dwarves dctrl-tools linux-headers-$(uname -r) bluez libbluetooth-dev
 
       - name: Checkout rootfs
         uses: actions/download-artifact@v4.1.2

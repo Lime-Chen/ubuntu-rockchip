@@ -1,3 +1,2 @@
 GIT=https://github.com/Lemon1151/u-boot-rk3xxx.git
-COMMIT=4de0d2cc21b6f1d57be370cb847e7efcca3a87ac
 BRANCH=v2022.07

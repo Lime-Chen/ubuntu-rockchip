@@ -1,6 +1,6 @@
 # shellcheck shell=bash
 
-export BOARD_NAME="Fmx1 PRO"
+export BOARD_NAME="Fmx1 Pro"
 export BOARD_MAKER="Rockchip"
 export BOARD_SOC="Rockchip RK3399"
 export BOARD_CPU="ARM Cortex A72 / A53"

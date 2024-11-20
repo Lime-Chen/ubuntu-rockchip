@@ -1,0 +1,41 @@
+Source: u-boot-rk3399
+Section: admin
+Priority: optional
+Maintainer: 
+Build-Depends: 
+ debhelper-compat (= 12),
+ parted,
+ gcc,
+ make,
+ bc,
+ bison,
+ flex,
+ device-tree-compiler,
+ udev,
+ python3,
+ libpython3-dev,
+ python3-pyelftools,
+ python3-setuptools,
+ python3-distutils,
+ python3-pkg-resources,
+ swig,
+ libfdt-dev,
+ libssl-dev,
+Standards-Version: 4.6.0
+Homepage: https://github.com/Lemon1151/u-boot-rk3xxx/
+Vcs-Browser: https://github.com/Lemon1151/u-boot-rk3xxx
+Vcs-Git: https://github.com/Lemon1151/u-boot-rk3xxx.git
+
+Package: u-boot-fmx1-pro
+Architecture: arm64
+Priority: optional
+Depends: mtd-utils
+Provides: u-boot-rk3399, u-boot
+Replaces: u-boot-rk3399, u-boot
+Conflicts: u-boot-rk3399, u-boot
+Description: A boot loader for the Fmx1 Pro.
+ Das U-Boot is a cross-platform bootloader for embedded systems,
+ used as the default boot loader by several board vendors.  It is
+ intended to be easy to port and to debug, and runs on many
+ supported architectures, including PPC, ARM, MIPS, x86, m68k,
+ NIOS, and Microblaze.

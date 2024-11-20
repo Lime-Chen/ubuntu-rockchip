@@ -20,7 +20,7 @@ if [ ! -d "${UBOOT_PACKAGE}" ]; then
     # shellcheck source=/dev/null
     source ../packages/"${UBOOT_PACKAGE}"/debian/upstream
     git clone --single-branch --progress -b "${BRANCH}" "${GIT}" "${UBOOT_PACKAGE}"
-    git -C "${UBOOT_PACKAGE}" checkout "${COMMIT}"
+    # git -C "${UBOOT_PACKAGE}" checkout "${COMMIT}"
     cp -r ../packages/"${UBOOT_PACKAGE}"/debian "${UBOOT_PACKAGE}"
 fi
 cd "${UBOOT_PACKAGE}"

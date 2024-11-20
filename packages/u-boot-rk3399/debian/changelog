@@ -3,4 +3,4 @@ u-boot-rk3399 (2024.11-20) jammy; urgency=medium
   * Add u-boot-rk3399
   * Update ddr and spl blobs
 
- -- Lime-Chen Wed, 20 Nov 2024 20:11:59 -0400
+ -- Lime-Chen <smile1151@foxmail.com>  Wed, 20 Nov 2024 20:11:59 -0400

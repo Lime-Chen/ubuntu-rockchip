@@ -15,13 +15,13 @@ function config_image_hook__fmx1-pro() {
 
     if [ "${suite}" == "jammy" ] || [ "${suite}" == "noble" ]; then
         # Install panfork
-        chroot "${rootfs}" add-apt-repository -y ppa:jjriek/panfork-mesa
+        # chroot "${rootfs}" add-apt-repository -y ppa:jjriek/panfork-mesa
         chroot "${rootfs}" apt-get update
-        chroot "${rootfs}" apt-get -y install mali-t860-firmware
+        # chroot "${rootfs}" apt-get -y install mali-t860-firmware
         chroot "${rootfs}" apt-get -y dist-upgrade
 
         # Install libmali blobs alongside panfork
-        chroot "${rootfs}" apt-get -y install libmali-t860-x11
+        # chroot "${rootfs}" apt-get -y install libmali-t860-x11
     fi
 
     return 0

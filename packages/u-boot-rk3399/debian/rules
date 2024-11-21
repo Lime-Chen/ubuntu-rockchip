@@ -46,10 +46,18 @@ package-%:
 	@mkdir -m 755 -p debian/tmp/u-boot/usr/lib/u-boot/
 	@mkdir -m 755 -p debian/tmp/u-boot/usr/bin/
 
-	@cp debian/build/$(subst package-,,$@)/u-boot-rockchip.bin debian/tmp/u-boot/usr/lib/u-boot/u-boot-rockchip.bin
-	# @cp debian/build/$(subst package-,,$@)/u-boot-rockchip-spi.bin debian/tmp/u-boot/usr/lib/u-boot/u-boot-rockchip-spi.bin
+	@if [ -f "debian/build/$(subst package-,,$@)/u-boot-rockchip.bin" ]; then \
+		cp debian/build/$(subst package-,,$@)/u-boot-rockchip.bin debian/tmp/u-boot/usr/lib/u-boot/u-boot-rockchip.bin; \
+	else \
+		echo "$(basename "$0"): u-boot-rockchip.bin not found, skipping this step"; \
+	fi
+	@if [ -f "debian/build/$(subst package-,,$@)/u-boot-rockchip-spi.bin" ]; then \
+		cp debian/build/$(subst package-,,$@)/u-boot-rockchip-spi.bin debian/tmp/u-boot/usr/lib/u-boot/u-boot-rockchip-spi.bin; \
+	else \
+		echo "$(basename "$0"): u-boot-rockchip-spi.bin not found, skipping this step"; \
+	fi
 	@cp debian/bin/u-boot-install debian/tmp/u-boot/usr/bin/u-boot-install
-	# @cp debian/bin/u-boot-install-mtd debian/tmp/u-boot/usr/bin/u-boot-install-mtd
+	@cp debian/bin/u-boot-install-mtd debian/tmp/u-boot/usr/bin/u-boot-install-mtd
 
 	@mkdir -m 755 -p "debian/tmp/u-boot/DEBIAN"
 	@cp debian/preinst debian/tmp/u-boot/DEBIAN/preinst

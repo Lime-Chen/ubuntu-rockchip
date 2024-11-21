@@ -1,12 +1,13 @@
 #!/bin/bash
 
-set -eE 
+set -eE
 
 disk="/dev/mtd0"
 if [ ! -c "${disk}" ]; then
-    echo "$(basename "$0"): block device '${disk}' not found"
-    exit 1
+    echo "$(basename "$0"): block device '${disk}' not found, skipping this script"
+    exit 0  # 退出脚本，但不返回错误码
 fi
+
 echo "$(basename "$0"): writing U-Boot to the SPI flash"
 
 uboot_spi_image="/usr/lib/u-boot/u-boot-rockchip-spi.bin"
@@ -14,10 +15,16 @@ if [ ! -f "${uboot_spi_image}" ]; then
     uboot_spi_image="/usr/lib/u-boot/rkspi_loader.img"
 fi
 
+echo "$(basename "$0"): Using U-Boot image '${uboot_spi_image}'"
+
 extra_opts_flashcp=("--verbose")
 if flashcp -h | grep -q -e '--partition'; then
     extra_opts_flashcp+=("--partition")
 fi
-sudo flashcp "${extra_opts_flashcp[@]}" "${uboot_spi_image}" "${disk}"
+
+if ! sudo flashcp "${extra_opts_flashcp[@]}" "${uboot_spi_image}" "${disk}"; then
+    echo "$(basename "$0"): Failed to write U-Boot to SPI flash"
+    exit 1
+fi
 
 sudo sync

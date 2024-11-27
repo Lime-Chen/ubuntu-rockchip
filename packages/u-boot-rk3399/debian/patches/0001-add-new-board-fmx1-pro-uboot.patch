@@ -105,7 +105,7 @@ new file mode 100644
 + */
 +
 +#include "rk3399-u-boot.dtsi"
-+#include "rk3399-sdram-lpddr3-samsung-4GB-1866.dtsi"
++#include "rk3399-sdram-lpddr3-4GB-1600.dtsi"
 +
 +/ {
 +	chosen {

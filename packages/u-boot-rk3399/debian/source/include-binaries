@@ -1,3 +1,4 @@
 debian/rkbin/rk3399_bl31_v1.30.elf
+debian/rkbin/rk3399_bl31_v1.35.elf
 debian/rkbin/rk3399_ddr_800MHz_v1.25.bin
 debian/rkbin/rk3399_ddr_933MHz_v1.25.bin

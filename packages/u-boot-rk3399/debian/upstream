@@ -1,2 +1,2 @@
-GIT=https://github.com/Lemon1151/u-boot-rk3xxx.git
+GIT=https://github.com/Lime-Chen/u-boot.git
 BRANCH=v2022.07

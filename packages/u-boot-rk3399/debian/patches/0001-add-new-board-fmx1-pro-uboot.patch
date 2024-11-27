@@ -10,7 +10,7 @@ diff --git a/configs/fmx1-pro-rk3399_defconfig b/configs/fmx1-pro-rk3399_defconf
 new file mode 100644
 --- /dev/null
 +++ b/configs/fmx1-pro-rk3399_defconfig
-@@ -0,0 +1,83 @@
+@@ -0,0 +1,82 @@
 +CONFIG_ARM=y
 +CONFIG_ARCH_ROCKCHIP=y
 +CONFIG_SYS_TEXT_BASE=0x00200000
@@ -38,9 +38,8 @@ new file mode 100644
 +CONFIG_SPL_STACK=0x400000
 +CONFIG_SPL_STACK_R=y
 +CONFIG_SPL_STACK_R_MALLOC_SIMPLE_LEN=0x10000
-+
 +CONFIG_TPL=y
-+CONFIG_SYS_PROMPT="FMX1 => "
++CONFIG_SYS_PROMPT="FMX1-PRO => "
 +CONFIG_CMD_BOOTZ=y
 +CONFIG_CMD_GPT=y
 +CONFIG_CMD_GPIO=y

@@ -22,9 +22,9 @@ Build-Depends:
  libfdt-dev,
  libssl-dev,
 Standards-Version: 4.6.0
-Homepage: https://github.com/Lemon1151/u-boot-rk3xxx/
-Vcs-Browser: https://github.com/Lemon1151/u-boot-rk3xxx
-Vcs-Git: https://github.com/Lemon1151/u-boot-rk3xxx.git
+Homepage: https://github.com/Lime-Chen/u-boot/
+Vcs-Browser: https://github.com/Lime-Chen/u-boot
+Vcs-Git: https://github.com/Lime-Chen/u-boot.git
 
 Package: u-boot-fmx1-pro
 Architecture: arm64

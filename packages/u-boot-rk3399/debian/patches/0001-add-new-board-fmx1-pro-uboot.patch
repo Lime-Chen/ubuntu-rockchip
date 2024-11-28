@@ -1,11 +1,19 @@
+From: Your Name <smile1151@foxmail.com>
+Date: Thu, 28 Nov 2024 08:40:00 +0000
+Subject: [PATCH] Add support for FMX1-Pro board
+
+Add the device tree binary for the FMX1-Pro board to the build system.
+
+Signed-off-by: Your Name <smile1151@foxmail.com>
+
 diff --git a/arch/arm/dts/Makefile b/arch/arm/dts/Makefile
 --- a/arch/arm/dts/Makefile
 +++ b/arch/arm/dts/Makefile
 @@ -143,3 +143,4 @@ dtb-$(CONFIG_ROCKCHIP_RK3399) += \
-	rk3399-firefly.dtb \
+ 	rk3399-firefly.dtb \
 +	rk3399-fmx1-pro.dtb \
-	rk3399-gru-bob.dtb \
-	rk3399-gru-kevin.dtb \
+ 	rk3399-gru-bob.dtb \
+ 	rk3399-gru-kevin.dtb \
 diff --git a/configs/fmx1-pro-rk3399_defconfig b/configs/fmx1-pro-rk3399_defconfig
 new file mode 100644
 --- /dev/null

@@ -6,14 +6,14 @@ export BOARD_SOC="Rockchip RK3399"
 export BOARD_CPU="ARM Cortex A72 / A53"
 export UBOOT_PACKAGE="u-boot-rk3399"
 export UBOOT_RULES_TARGET="fmx1-pro-rk3399"
-export COMPATIBLE_SUITES=("jammy" "noble")
+export COMPATIBLE_SUITES=("jammy" "noble" "oracular")
 export COMPATIBLE_FLAVORS=("server" "desktop")
 
 function config_image_hook__fmx1-pro() {
     local rootfs="$1"
     local suite="$3"
 
-    if [ "${suite}" == "jammy" ] || [ "${suite}" == "noble" ]; then
+    if [ "${suite}" == "jammy" ] || [ "${suite}" == "noble" ] || [ "${suite}" == "oracular" ]; then
         # Install panfork
         # chroot "${rootfs}" add-apt-repository -y ppa:jjriek/panfork-mesa
         chroot "${rootfs}" apt-get update

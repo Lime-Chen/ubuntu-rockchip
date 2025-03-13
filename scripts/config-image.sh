@@ -135,6 +135,7 @@ setup_mountpoint $chroot_dir
 chroot $chroot_dir apt-get update
 chroot $chroot_dir apt-get -y upgrade
 chroot $chroot_dir apt-get -y install mtd-utils  # 确保安装mtd-utils和其他必要的依赖
+chroot $chroot_dir apt-get -y install linux-base  # 确保linux-base已安装
     
 # Run config hook to handle board specific changes
 if [[ $(type -t config_image_hook__"${BOARD}") == function ]]; then

@@ -7,4 +7,4 @@ export KERNEL_REPO="https://github.com/Lime-Chen/linux-rockchip.git"
 export KERNEL_BRANCH="oracular"
 export KERNEL_FLAVOR="rockchip"
 
-export EXTRA_PPAS="jjriek/rockchip jjriek/rockchip-multimedia"
+# export EXTRA_PPAS="jjriek/rockchip jjriek/rockchip-multimedia"

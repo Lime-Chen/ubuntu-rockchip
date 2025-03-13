@@ -3,7 +3,7 @@
 export RELASE_NAME="Ubuntu 24.04 LTS (Noble Nombat)"
 export RELASE_VERSION="24.04"
 
-export KERNEL_REPO="https://github.com/Lime-Chen/linux-6.12.y.git"
+export KERNEL_REPO="https://github.com/Lime-Chen/linux-rockchip.git"
 export KERNEL_BRANCH="noble"
 export KERNEL_FLAVOR="rockchip"
 

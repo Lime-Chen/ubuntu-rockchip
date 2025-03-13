@@ -221,8 +221,8 @@ jobs:
         if: success() 
         uses: ncipollo/release-action@main
         with:  
-          tag: "Ubuntu_v2.4.2"  
-          name: "Ubuntu_v2.4.2"  
+          tag: "Ubuntu_v4.0.1"  
+          name: "Ubuntu_v4.0.1"  
           artifacts: "images/ubuntu-*-preinstalled-*-arm64-${{ matrix.board }}.*"  
           allowUpdates: true 
           removeArtifacts: false 
@@ -231,7 +231,7 @@ jobs:
           body: |  
             ### Ubuntu Image Information  
             - jammy:kernel_5.10
-            - noble:kernel_6.1   
+            - noble:kernel_6.12   
             - Suite: server_ desktop 
             ### Ubuntu Image Verification  
             - sha256sum   

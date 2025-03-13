@@ -1,4 +1,4 @@
-name: Build diy
+name: Build 6.x-kernel
 
 on:
   workflow_dispatch:

@@ -20,11 +20,11 @@ fi
 source "../config/suites/${SUITE}.sh"
 
 # Clone the kernel repo
-if ! git -C linux-kernel pull; then
-    git clone --progress -b "${KERNEL_BRANCH}" "${KERNEL_REPO}" linux-kernel --depth=2
+if ! git -C linux-rockchip pull; then
+    git clone --progress -b "${KERNEL_BRANCH}" "${KERNEL_REPO}" linux-rockchip --depth=2
 fi
 
-cd linux-kernel
+cd linux-rockchip
 git checkout "${KERNEL_BRANCH}"
 
 # shellcheck disable=SC2046

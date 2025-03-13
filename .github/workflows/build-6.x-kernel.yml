@@ -15,7 +15,6 @@ on:
           - armsom-sige7
           - armsom-w3
           - cyber3588-aib
-          - fmx1-pro
           - indiedroid-nova
           - lubancat-4
           - mixtile-blade3
@@ -153,7 +152,7 @@ jobs:
       - name: Upload
         uses: actions/upload-artifact@v4.3.3
         with:
-            name: linux-rockchip-${{ matrix.suite == 'jammy' && '5.10' || matrix.suite == 'noble' && '6.12' || matrix.suite == 'oracular' && '6.12'}}
+            name: linux-rockchip-${{ matrix.suite == 'jammy' && '5.10' || matrix.suite == 'noble' && '6.1' || matrix.suite == 'oracular' && '6.11'}}
             path: ./build/linux-*.deb
             if-no-files-found: error
 
@@ -210,7 +209,7 @@ jobs:
       - name: Checkout kernel
         uses: actions/download-artifact@v4.1.2
         with:
-            name: linux-rockchip-${{ matrix.suite == 'jammy' && '5.10' || matrix.suite == 'noble' && '6.12' || matrix.suite == 'oracular' && '6.12' }}
+            name: linux-rockchip-${{ matrix.suite == 'jammy' && '5.10' || matrix.suite == 'noble' && '6.1' || matrix.suite == 'oracular' && '6.11' }}
             path: ./build/
 
       - name: Build
@@ -231,7 +230,7 @@ jobs:
           body: |  
             ### Ubuntu Image Information  
             - jammy:kernel_5.10
-            - noble:kernel_6.12   
+            - noble:kernel_6.1   
             - Suite: server_ desktop 
             ### Ubuntu Image Verification  
             - sha256sum   

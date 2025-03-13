@@ -11,10 +11,6 @@ fi
 cd "$(dirname -- "$(readlink -f -- "$0")")" && cd ..
 mkdir -p build && cd build
 
-# 确保安装了必要的依赖项
-sudo apt-get update
-sudo apt-get install -y mtd-utils
-
 if [[ -z ${UBOOT_PACKAGE} ]]; then
     echo "Error: UBOOT_PACKAGE is not set"
     exit 1

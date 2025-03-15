@@ -27,8 +27,6 @@ fi
 cd linux-rockchip
 git checkout "${KERNEL_BRANCH}"
 
-source "../build/linux-rockchip/debian/debian.env"
-
 # shellcheck disable=SC2046
 export $(dpkg-architecture -aarm64)
 export ARCH=arm64

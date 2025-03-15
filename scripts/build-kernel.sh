@@ -18,7 +18,6 @@ fi
 
 # shellcheck source=/dev/null
 source "../config/suites/${SUITE}.sh"
-source "../build/linux-rockchip/debian/debian.env"
 
 # Clone the kernel repo
 if ! git -C linux-rockchip pull; then
@@ -27,6 +26,8 @@ fi
 
 cd linux-rockchip
 git checkout "${KERNEL_BRANCH}"
+
+source "../build/linux-rockchip/debian/debian.env"
 
 # shellcheck disable=SC2046
 export $(dpkg-architecture -aarm64)

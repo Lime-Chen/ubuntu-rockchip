@@ -46,4 +46,4 @@ ${CC} --version
 # Compile the kernel into a deb package
 # fakeroot debian/rules clean binary-headers binary-rockchip do_mainline_build=true
 # 编译内核为deb包时确保使用正确的环境变量
-DEB_BUILD_OPTIONS="crossbuild-arch=${ARCH}" fakeroot debian/rules clean binary-headers binary-rockchip do_mainline_build=true
+DEB_BUILD_OPTIONS="crossbuild-arch=${ARCH}" fakeroot debian/rules clean binary-headers binary-rockchip do_mainline_build=true V=1

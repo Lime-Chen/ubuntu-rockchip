@@ -220,8 +220,8 @@ jobs:
         if: success() 
         uses: ncipollo/release-action@main
         with:  
-          tag: "Ubuntu_v2.4.3"  
-          name: "Ubuntu_v2.4.3"  
+          tag: "Ubuntu_v2.4.6"  
+          name: "Ubuntu_v2.4.6"  
           artifacts: "images/ubuntu-*-preinstalled-*-arm64-${{ matrix.board }}.*"  
           allowUpdates: true 
           removeArtifacts: false 

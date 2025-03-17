@@ -2,8 +2,7 @@
 
 [Release Ubuntu_v2.4.6](https://github.com/Lime-Chen/ubuntu-rockchip/releases/latest)
 
-Add support for the Cyber3588aib board.
-
+Add support for the Cyber3588aib board.  
 Ubuntu Rockchip is a community project porting Ubuntu to Rockchip hardware with the goal of providing a stable and fully functional environment.
 
 ## Highlights

@@ -4,9 +4,9 @@ on:
   workflow_dispatch: # 手动触发
     inputs:
       version:
-        description: '版本号 (例如 v1.0.0)'
+        description: '版本号 (例如 v2.4.6)'
         required: true
-        default: 'v1.0.0'
+        default: 'v2.4.6'
   push:
     tags:
       - 'v*' # 当推送了一个以 "v" 开头的标签时自动触发
@@ -20,16 +20,25 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v3
 
+      # 动态生成完整版本号
+      - name: Generate Full Version
+        id: generate_version
+        run: |
+          USER_INPUT="${{ github.event.inputs.version || github.ref_name }}"
+          FULL_VERSION="Ubuntu_${USER_INPUT}"
+          echo "Generated full version: $FULL_VERSION"
+          echo "full_version=$FULL_VERSION" >> $GITHUB_ENV
+
       # 创建或更新发布版本
       - name: Create Release
         id: create_release
         uses: softprops/action-gh-release@v1
         with:
-          tag_name: ${{ github.event.inputs.version || github.ref_name }}
-          name: ${{ github.event.inputs.version || github.ref_name }}
+          tag_name: ${{ env.full_version }}
+          name: ${{ env.full_version }}
           body: |
             ### Release Information
-            - 自动生成的版本号: ${{ github.event.inputs.version || github.ref_name }}
+            - 自动生成的版本号: ${{ env.full_version }}
             - 发布时间: ${{ github.run_start_time }}
           draft: false
           prerelease: false
@@ -38,7 +47,7 @@ jobs:
 
       # 将版本号保存为 artifact
       - name: Save Version Number
-        run: echo "${{ github.event.inputs.version || github.ref_name }}" > version.txt
+        run: echo "${{ env.full_version }}" > version.txt
 
       # 上传版本号文件
       - name: Upload Version Artifact

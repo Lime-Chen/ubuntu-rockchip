@@ -9,7 +9,8 @@ on:
         default: 'v2.4.6'
   push:
     tags:
-      - 'v*' # 当推送了一个以 "v" 开头的标签时自动触发
+      - 'v*'       # 匹配以 "v" 开头的标签
+      - 'shiv*'    # 匹配以 "shiv" 开头的标签
 
 jobs:
   create-release:
@@ -25,7 +26,7 @@ jobs:
         id: generate_version
         run: |
           USER_INPUT="${{ github.event.inputs.version || github.ref_name }}"
-          echo "User input version: $USER_INPUT"
+          echo "Raw user input: $USER_INPUT"
           FULL_VERSION="Ubuntu_${USER_INPUT}"
           echo "Generated full version: $FULL_VERSION"
           echo "full_version=$FULL_VERSION" >> $GITHUB_ENV

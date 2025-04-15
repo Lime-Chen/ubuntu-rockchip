@@ -55,7 +55,7 @@ jobs:
 
       # 上传版本号文件
       - name: Upload Version Artifact
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@0b6e8f4d5a7c3b2e1f9g8h7i6j5k4l3m2n1o0p
         with:
           name: release-version
           path: version.txt

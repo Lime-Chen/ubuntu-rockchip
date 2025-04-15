@@ -25,6 +25,7 @@ jobs:
         id: generate_version
         run: |
           USER_INPUT="${{ github.event.inputs.version || github.ref_name }}"
+          echo "User input version: $USER_INPUT"
           FULL_VERSION="Ubuntu_${USER_INPUT}"
           echo "Generated full version: $FULL_VERSION"
           echo "full_version=$FULL_VERSION" >> $GITHUB_ENV
@@ -47,7 +48,9 @@ jobs:
 
       # 将版本号保存为 artifact
       - name: Save Version Number
-        run: echo "${{ env.full_version }}" > version.txt
+        run: |
+          echo "Writing version to file: ${{ env.full_version }}"
+          echo "${{ env.full_version }}" > version.txt
 
       # 上传版本号文件
       - name: Upload Version Artifact

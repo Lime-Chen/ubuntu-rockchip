@@ -40,7 +40,7 @@ on:
           - rock-5b-plus
           - rock-5c
           - rock-5d
-          - tb-rk3588sd
+          - toybrick-d0
           - turing-rk1
       suite:
         description: 'Ubuntu version'

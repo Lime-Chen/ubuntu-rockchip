@@ -385,7 +385,7 @@ Description: A boot loader for the Cyber 3588 AIB.
  supported architectures, including PPC, ARM, MIPS, x86, m68k,
  NIOS, and Microblaze.
  
-Package: u-boot-tb-rk3588sd
+Package: u-boot-toybrick-d0
 Architecture: arm64
 Priority: optional
 Depends: mtd-utils

@@ -14,3 +14,5 @@
 0014-board-rockchip-Add-the-ArmSoM-AIM7.patch
 0015-Revert-rockchip-resource-Add-avb-verify.patch
 0016-add-defconfig-and-dts-of-cyber3588-aib.patch
+0017-add-defconfig-and-dts-of-tb-rk3588sd.patch
+0999-reopen_disabled_nodes.patch
